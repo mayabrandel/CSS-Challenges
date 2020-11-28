@@ -1,0 +1,104 @@
+* {
+  font-family: system-ui, sans-serif;
+}
+
+
+/* CHALLENGE 1 - Button Hover */
+
+button {
+  font-size: 24px;
+  color: #073B4C;
+  font-weight: 600;
+  border-width: 2px;
+  border-color: #073B4C;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+button:hover {
+  background-color: #118AB2;
+  color: white;
+  cursor: pointer;
+}
+
+/* CHALLENGE 2 - Oscillating Rectangles */
+
+.bar {
+  background: #444444;
+  height: 60px;
+  width: 200px;
+  margin: 60px auto;
+  transform: translateX(0);
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.bar:nth-child(2) {
+  animation-direction: alternate;
+}
+
+.bar:nth-child(3) {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-200px);
+  } 
+  
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+
+
+/* CHALLENGE 3 - Circle Wave */
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transform: translateY(100px);
+  animation-name: moveup;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.circle:nth-child(2) {
+  background-color: #EF476F;
+}
+.circle:nth-child(3) {
+  background-color: #FFD166;
+  animation-delay: 0.1s;
+}
+.circle:nth-child(4) {
+  background-color: #06D6A0;
+  animation-delay: 0.2s;
+}
+.circle:nth-child(5) {
+  background-color: #118AB2;
+  animation-delay: 0.3s;
+}
+.circle:nth-child(6) {
+  background-color: #073B4C;
+  animation-delay: 0.4s;
+}
+
+
+@keyframes moveup {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
